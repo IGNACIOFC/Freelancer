@@ -2,6 +2,7 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --oscuro: #212121;
+    --gris: #757575;
 }
 
 html {
@@ -29,8 +30,20 @@ h3 {
     margin: 0;
 }
 
+h2,
+h3 {
+    text-align: center;
+}
+
 h3 {
     color: var(--secundario);
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 2;
 }
 
 
@@ -118,31 +131,115 @@ h3 {
     font-weight: 700;
     font-size: 2.2rem;
     border-radius: 2rem;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 
 /** Nuestros Servicios **/
 
-.servicios {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contenedor {
     max-width: 1200px;
-    margin: 5rem auto;
+    margin: 0 auto;
+    background-color: white;
+    padding: 3rem;
     border-radius: 1rem;
+    -webkit-box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.75);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contenedor-servicios {
+    margin-top: 3rem;
 }
 
 @media (min-width: 768px) {
+    .contenedor-servicios {
+        display: flex;
+        justify-content: space-between;
+    }
     .servicio {
-        flex-direction: row;
+        flex: 0 0 calc(33.3% - 1rem);
     }
 }
 
-.servicios h2 {
-    padding-top: 3rem;
+.iconos {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--primario);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
-.servicio {
-    padding: 4rem 2rem;
+.iconos {
+    font-size: 3rem;
+}
+
+form {
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 3rem;
+}
+
+form legend {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primario);
+    margin: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    form {
+        max-width: 800px;
+        margin: 3rem auto;
+    }
+    .contenedor-campos {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .campos {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+.campos {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campos label {
+    flex: 0 0 90px;
+    padding-top: 0.5rem;
+    color: white;
+}
+
+.campos input {
+    flex: 1;
+    height: 4rem;
+}
+
+.campos textarea {
+    flex: 1;
+    height: 6rem;
+}
+
+.w-100 {
+    flex: 0 0 100%;
+}
+
+.enviar {
+    display: flex;
+    justify-content: center;
 }
